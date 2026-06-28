@@ -100,7 +100,31 @@ TUBES ML (2)/
 │
 ├── requirements.txt                         # Dependencies proyek
 └── README.md                                # Dokumentasi (file ini)
-💻 Instalasi & PenggunaanPrerequisitesPython 3.8 atau lebih barupip (Python package manager)Langkah InstalasiClone repositoryBashgit clone [https://github.com/](https://github.com/)[USERNAME_GITHUB_KAMU]/[NAMA_REPO_KAMU].git
-cd [NAMA_REPO_KAMU]
-Install dependenciesBashpip install -r requirements.txt
-(Catatan: Pengguna Windows dapat menggunakan py -m pip install -r requirements.txt)Cara Menjalankan PipelineProyek ini menggunakan arsitektur interaktif berbasis Jupyter Notebook.Buka folder proyek di VS Code atau Jupyter Lab.Jalankan notebooks/01_EDA_And_Preprocessing.ipynb dengan menekan tombol Run All. Skrip ini akan memuat dataset, melakukan inspeksi awal, dan menerapkan encoding.Jalankan notebooks/02_Model_Training_and_Evaluation.ipynb dengan menekan tombol Run All. Skrip ini akan melatih ke-4 model ML, menghasilkan metrik evaluasi, mencetak visualisasi ke layar (serta menyimpannya jika diatur), dan mengekspor model ke folder models/.🏆 Hasil & AnalisisPerforma ModelEvaluasi pada data uji (test set) menghasilkan urutan performa sebagai berikut:Support Vector Machine (SVM) — 95.05% 🏆XGBoost Classifier — 93.79% 🥈Random Forest Classifier — 92.60% 🥉K-Nearest Neighbors (KNN) — 90.02%KesimpulanModel Support Vector Machine (SVM) dengan kernel RBF terbukti menjadi model yang paling optimal untuk dataset UCI HAR. SVM mampu menangani ruang dimensi tinggi (561 fitur) dengan sangat baik dalam memisahkan batas keputusan kelas aktivitas dinamis dan statis tanpa mengalami kendala overfitting yang berlebihan.🛠️ TeknologiTeknologiKegunaanPython 3.xBahasa pemrograman utamapandasManipulasi dan analisis data tabularNumPyKomputasi numerik array/matriksscikit-learnPemodelan ML (SVM, KNN, RF), Preprocessing, & EvaluasiXGBoostAlgoritma Gradient Boosting classifierMatplotlib & SeabornVisualisasi data dan grafik statistikjoblibEkspor dan penyimpanan model .pkl
+
+Instalasi & Penggunaan
+Prerequisites
+Python 3.8 atau lebih barupip (Python package manager)
+
+Langkah Instalasi
+Clone repository
+
+git clone [https://github.com/raymoond99/UCI-Human-Activity-Recognition-ML.git](https://github.com/raymoond99/UCI-Human-Activity-Recognition-ML.git)
+cd UCI-Human-Activity-Recognition-ML
+Install dependencies
+pip install -r requirements.txt
+(Catatan: Pengguna Windows dapat menggunakan py -m pip install -r requirements.txt)
+
+Cara Menjalankan Pipeline
+Proyek ini menggunakan arsitektur interaktif berbasis Jupyter Notebook.
+1. Buka folder proyek di VS Code atau Jupyter Lab.
+2. Jalankan notebooks/01_EDA_And_Preprocessing.ipynb dengan menekan tombol Run All. Skrip ini akan memuat dataset, melakukan inspeksi awal, dan menerapkan encoding.
+3. Jalankan notebooks/02_Model_Training_and_Evaluation.ipynb dengan menekan tombol Run All. Skrip ini akan melatih ke-4 model ML, menghasilkan metrik evaluasi, mencetak visualisasi ke layar (serta menyimpannya jika diatur), dan mengekspor model ke folder models/.
+
+Hasil & Analisis
+Performa ModelEvaluasi pada data uji (test set) menghasilkan urutan performa sebagai berikut:
+1. Support Vector Machine (SVM) — 95.05%
+2. XGBoost Classifier — 93.79% 
+3. Random Forest Classifier — 92.60% 
+4. K-Nearest Neighbors (KNN) — 90.02%K
+esimpulanModel Support Vector Machine (SVM) dengan kernel RBF terbukti menjadi model yang paling optimal untuk dataset UCI HAR. SVM mampu menangani ruang dimensi tinggi (561 fitur) dengan sangat baik dalam memisahkan batas keputusan kelas aktivitas dinamis dan statis tanpa mengalami kendala overfitting yang berlebihan.
+TeknologiTeknologiKegunaanPython 3.xBahasa pemrograman utamapandasManipulasi dan analisis data tabularNumPyKomputasi numerik array/matriksscikit-learnPemodelan ML (SVM, KNN, RF), Preprocessing, & EvaluasiXGBoostAlgoritma Gradient Boosting classifierMatplotlib & SeabornVisualisasi data dan grafik statistikjoblibEkspor dan penyimpanan model .pkl
