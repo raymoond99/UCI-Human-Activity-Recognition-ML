@@ -120,11 +120,26 @@ Proyek ini menggunakan arsitektur interaktif berbasis Jupyter Notebook.
 2. Jalankan notebooks/01_EDA_And_Preprocessing.ipynb dengan menekan tombol Run All. Skrip ini akan memuat dataset, melakukan inspeksi awal, dan menerapkan encoding.
 3. Jalankan notebooks/02_Model_Training_and_Evaluation.ipynb dengan menekan tombol Run All. Skrip ini akan melatih ke-4 model ML, menghasilkan metrik evaluasi, mencetak visualisasi ke layar (serta menyimpannya jika diatur), dan mengekspor model ke folder models/.
 
-Hasil & Analisis
-Performa ModelEvaluasi pada data uji (test set) menghasilkan urutan performa sebagai berikut:
-1. Support Vector Machine (SVM) — 95.05%
-2. XGBoost Classifier — 93.79% 
-3. Random Forest Classifier — 92.60% 
-4. K-Nearest Neighbors (KNN) — 90.02%K
-esimpulanModel Support Vector Machine (SVM) dengan kernel RBF terbukti menjadi model yang paling optimal untuk dataset UCI HAR. SVM mampu menangani ruang dimensi tinggi (561 fitur) dengan sangat baik dalam memisahkan batas keputusan kelas aktivitas dinamis dan statis tanpa mengalami kendala overfitting yang berlebihan.
-TeknologiTeknologiKegunaanPython 3.xBahasa pemrograman utamapandasManipulasi dan analisis data tabularNumPyKomputasi numerik array/matriksscikit-learnPemodelan ML (SVM, KNN, RF), Preprocessing, & EvaluasiXGBoostAlgoritma Gradient Boosting classifierMatplotlib & SeabornVisualisasi data dan grafik statistikjoblibEkspor dan penyimpanan model .pkl
+## Hasil & Analisis
+
+### Performa Model
+Evaluasi pada data uji (test set) menghasilkan urutan performa sebagai berikut:
+- 1. Support Vector Machine (SVM) — 95.05% (Juara Terbaik)
+- 2. XGBoost Classifier — 93.79%
+- 3. Random Forest Classifier — 92.60%
+- 4. K-Nearest Neighbors (KNN) — 90.02%
+
+### Kesimpulan
+Model Support Vector Machine (SVM) dengan kernel RBF terbukti menjadi model yang paling optimal untuk dataset UCI HAR. SVM mampu menangani ruang dimensi tinggi (561 fitur) dengan sangat baik dalam memisahkan batas keputusan kelas aktivitas dinamis dan statis tanpa mengalami kendala overfitting yang berlebihan.
+
+---
+
+## Teknologi dan Kegunaan
+
+- Python 3.x : Bahasa pemrograman utama
+- pandas : Manipulasi dan analisis data tabular
+- NumPy : Komputasi numerik array dan matriks
+- scikit-learn : Pemodelan ML (SVM, KNN, RF), Preprocessing, dan Evaluasi
+- XGBoost : Algoritma Gradient Boosting classifier yang cepat dan powerful
+- Matplotlib & Seaborn : Visualisasi data dan grafik statistik
+- joblib : Ekspor dan penyimpanan file model .pkl
