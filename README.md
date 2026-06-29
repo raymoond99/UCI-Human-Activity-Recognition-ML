@@ -101,27 +101,38 @@ TUBES ML (2)/
 ├── requirements.txt                         # Dependencies proyek
 └── README.md                                # Dokumentasi (file ini)
 ```
+## Instalasi & Penggunaan
 
-Instalasi & Penggunaan
-Prerequisites
-Python 3.8 atau lebih barupip (Python package manager)
+### Prerequisites
+* **Python 3.8** atau lebih baru
+* **pip** (Python package manager)
 
-Langkah Instalasi
-Clone repository
+### Langkah Instalasi
 
-git clone [https://github.com/raymoond99/UCI-Human-Activity-Recognition-ML.git](https://github.com/raymoond99/UCI-Human-Activity-Recognition-ML.git)
-cd UCI-Human-Activity-Recognition-ML
-Install dependencies
-pip install -r requirements.txt
-(Catatan: Pengguna Windows dapat menggunakan py -m pip install -r requirements.txt)
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/raymoond99/UCI-Human-Activity-Recognition-ML.git
+   ```
 
-Cara Menjalankan Pipeline
-Proyek ini menggunakan arsitektur interaktif berbasis Jupyter Notebook.
-1. Buka folder proyek di VS Code atau Jupyter Lab.
-2. Jalankan notebooks/01_EDA_And_Preprocessing.ipynb dengan menekan tombol Run All. Skrip ini akan memuat dataset, melakukan inspeksi awal, dan menerapkan encoding.
-3. Jalankan notebooks/02_Model_Training_and_Evaluation.ipynb dengan menekan tombol Run All. Skrip ini akan melatih ke-4 model ML, menghasilkan metrik evaluasi, mencetak visualisasi ke layar (serta menyimpannya jika diatur), dan mengekspor model ke folder models/.
+2. **Masuk ke Direktori Proyek**
+   ```bash
+   cd UCI-Human-Activity-Recognition-ML
+   ```
 
-Hasil & Analisis
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   *(Catatan: Pengguna Windows dapat menggunakan perintah `py -m pip install -r requirements.txt` jika perintah di atas error).*
+
+### Cara Menjalankan Pipeline
+Proyek ini menggunakan arsitektur interaktif berbasis **Jupyter Notebook**.
+
+1. Buka folder proyek utama ini di **VS Code** atau **Jupyter Lab**.
+2. Jalankan notebook pertama: `notebooks/01_EDA_And_Preprocessing.ipynb` dengan menekan tombol **Run All**. Skrip ini berfungsi untuk memuat dataset, melakukan inspeksi awal, serta menerapkan *encoding*.
+3. Jalankan notebook kedua: `notebooks/02_Model_Training_and_Evaluation.ipynb` dengan menekan tombol **Run All**. Skrip ini akan melatih ke-4 model ML, menghasilkan metrik evaluasi, mencetak visualisasi ke layar, serta mengekspor model final ke folder `models/`.
+
+---
 
 Performa Model
 Evaluasi pada data uji (test set) menghasilkan urutan performa sebagai berikut:
@@ -140,12 +151,14 @@ Berikut adalah grafik perbandingan akurasi dari keempat model yang diuji:
 Kesimpulan
 Model Support Vector Machine (SVM) dengan kernel RBF terbukti menjadi model yang paling optimal untuk dataset UCI HAR. SVM mampu menangani ruang dimensi tinggi (561 fitur) dengan sangat baik dalam memisahkan batas keputusan kelas aktivitas dinamis dan statis tanpa mengalami kendala overfitting yang berlebihan
 
-Teknologi dan Kegunaan
+## Teknologi
 
-- Python 3.x : Bahasa pemrograman utama
-- pandas : Manipulasi dan analisis data tabular
-- NumPy : Komputasi numerik array dan matriks
-- scikit-learn : Pemodelan ML (SVM, KNN, RF), Preprocessing, dan Evaluasi
-- XGBoost : Algoritma Gradient Boosting classifier yang cepat dan powerful
-- Matplotlib & Seaborn : Visualisasi data dan grafik statistik
-- joblib : Ekspor dan penyimpanan file model .pkl
+| Teknologi | Kegunaan |
+| :--- | :--- |
+| **Python 3.x** | Bahasa pemrograman utama |
+| **pandas** | Manipulasi dan analisis data tabular |
+| **NumPy** | Komputasi numerik array dan matriks |
+| **scikit-learn** | Pemodelan ML (SVM, KNN, RF), Preprocessing, dan Evaluasi |
+| **XGBoost** | Algoritma Gradient Boosting classifier |
+| **Matplotlib & Seaborn** | Visualisasi data dan grafik statistik |
+| **joblib** | Ekspor dan penyimpanan model `.pkl` |
