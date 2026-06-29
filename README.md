@@ -4,7 +4,7 @@
 
 Proyek Machine Learning untuk memprediksi 6 jenis aktivitas fisik manusia (dinamis dan statis) berdasarkan data sensor *accelerometer* dan *gyroscope* dari *smartphone* menggunakan berbagai algoritma klasifikasi.
 
-## Angka Kelompok
+## Anggota Kelompok
 
 | Nama Lengkap | NIM | Program Studi |
 | :--- | :--- | :--- |
@@ -129,6 +129,13 @@ Evaluasi pada data uji (test set) menghasilkan urutan performa sebagai berikut:
 - 2. XGBoost Classifier — 93.79%
 - 3. Random Forest Classifier — 92.60%
 - 4. K-Nearest Neighbors (KNN) — 90.02%
+
+### Visualisasi Performa
+Berikut adalah grafik perbandingan akurasi dari keempat model yang diuji:
+
+![Perbandingan Model](Figures/01_model_comparison.png)
+
+![Confusion Matrix](Figures/02_confusion_matrix.png)
 
 Kesimpulan
 Model Support Vector Machine (SVM) dengan kernel RBF terbukti menjadi model yang paling optimal untuk dataset UCI HAR. SVM mampu menangani ruang dimensi tinggi (561 fitur) dengan sangat baik dalam memisahkan batas keputusan kelas aktivitas dinamis dan statis tanpa mengalami kendala overfitting yang berlebihan
